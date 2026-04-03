@@ -8,38 +8,35 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
 }
 
-/* HERO BACKGROUND */
+/* HERO */
 .hero {
   background: url('beach.jpg') center/cover no-repeat;
   height: 100vh;
   position: relative;
 }
 
-/* DARK OVERLAY */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.5);
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
-/* BOX */
 .box {
-  background: rgba(0,0,0,0.7);
+  background: black;
   padding: 25px;
   border-radius: 15px;
-  text-align: center;
   color: white;
   width: 300px;
+  text-align: center;
 }
 
-/* INPUTS */
 input, select {
   width: 100%;
   padding: 10px;
@@ -48,25 +45,23 @@ input, select {
   border: none;
 }
 
-/* BUTTONS */
 .btn {
   width: 100%;
   padding: 12px;
-  border: none;
   border-radius: 25px;
+  border: none;
   margin-top: 10px;
   color: white;
-  font-weight: bold;
   cursor: pointer;
 }
 
-.call { background: #007bff; }
+.call { background: #0a84ff; }
 .whatsapp { background: #25D366; }
 
 /* CARS */
 .cars {
-  background: #eee;
-  padding: 40px;
+  background: #cfc6b8;
+  padding: 50px;
   text-align: center;
 }
 
@@ -74,13 +69,12 @@ input, select {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .car {
-  background: white;
+  background: #e8e3da;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 15px;
   width: 200px;
 }
 
@@ -89,14 +83,44 @@ input, select {
   border-radius: 10px;
 }
 
-/* ABOUT + MAP */
-.about, .map {
+/* WHY */
+.why {
   padding: 40px;
   text-align: center;
-  background: white;
+  background: #ddd6cb;
+}
+
+/* REVIEWS */
+.reviews {
+  padding: 50px;
+  text-align: center;
+  background: #cfc6b8;
+}
+
+.review-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.review {
+  background: #e8e3da;
+  padding: 20px;
+  border-radius: 15px;
+  width: 250px;
+}
+
+/* MAP */
+.map {
+  padding: 40px;
+  background: #ddd6cb;
+  text-align: center;
 }
 
 .map iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
   border-radius: 10px;
 }
 </style>
@@ -109,6 +133,7 @@ input, select {
   <div class="overlay">
     <div class="box">
       <h2>RENTSPOT</h2>
+      <p>⭐⭐⭐⭐⭐ 4.9/5 (120 reviews)</p>
 
       <select>
         <option>Manual</option>
@@ -127,7 +152,6 @@ input, select {
 <!-- CARS -->
 <div class="cars">
   <h2>Choose Your Car</h2>
-
   <div class="car-list">
 
     <div class="car">
@@ -151,20 +175,32 @@ input, select {
   </div>
 </div>
 
-<!-- ABOUT -->
-<div class="about">
-  <h2>About Us</h2>
-  <p>We provide the best car rental service for your holidays. Fast, easy and reliable.</p>
+<!-- WHY -->
+<div class="why">
+  <h2>Why Choose Us</h2>
+  <p>✔ No Hidden Fees &nbsp;&nbsp; ✔ Free Airport Pickup &nbsp;&nbsp; ✔ 24/7 Support</p>
 </div>
 
-<!-- MAP -->
+<!-- REVIEWS -->
+<div class="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-boxes">
+    <div class="review">⭐⭐⭐⭐⭐<br>Excellent service and friendly staff</div>
+    <div class="review">⭐⭐⭐⭐⭐<br>Fast pickup and great prices</div>
+    <div class="review">⭐⭐⭐⭐⭐<br>Smooth and easy experience</div>
+  </div>
+
+  <br>
+  <button class="btn call">Leave a Review on Google</button>
+</div>
+
+<!-- MAP (FIXED LOCATION) -->
 <div class="map">
   <h2>Find Us</h2>
-  <iframe 
-    src="https://www.google.com/maps?q=Crete&output=embed"
-    width="100%" 
-    height="300" 
-    style="border:0;">
+
+  <iframe
+    src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza%2048100&output=embed">
   </iframe>
 </div>
 
