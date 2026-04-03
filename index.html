@@ -51,6 +51,7 @@ input, select {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .call { background: #0a84ff; }
@@ -133,22 +134,21 @@ input, select {
       <h2>RENTSPOT</h2>
       <p>⭐⭐⭐⭐⭐ 4.9/5 (120 reviews)</p>
 
-      <select>
+      <select id="type">
         <option>Manual</option>
         <option>Automatic</option>
       </select>
 
-      <input type="date">
-      <input type="date">
+      <input type="date" id="from">
+      <input type="date" id="to">
 
-      <!-- 📞 CALL -->
+      <!-- CALL -->
       <a href="tel:+306942874950" class="btn call">Call Now</a>
 
-      <!-- 💬 WHATSAPP -->
-      <a href="https://wa.me/306942874950?text=Hello%20I%20want%20to%20rent%20a%20car"
-         class="btn whatsapp" target="_blank">
-         Book via WhatsApp
-      </a>
+      <!-- WHATSAPP -->
+      <button onclick="sendWhatsApp()" class="btn whatsapp">
+        Book via WhatsApp
+      </button>
 
     </div>
   </div>
@@ -200,6 +200,23 @@ input, select {
   <h2>Find Us</h2>
   <iframe src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza%2048100&output=embed"></iframe>
 </div>
+
+<script>
+function sendWhatsApp() {
+  let type = document.getElementById("type").value;
+  let from = document.getElementById("from").value;
+  let to = document.getElementById("to").value;
+
+  let message = `Hello, I want to rent a car.
+Type: ${type}
+From: ${from}
+To: ${to}`;
+
+  let url = "https://wa.me/306942874950?text=" + encodeURIComponent(message);
+
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
