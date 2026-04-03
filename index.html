@@ -9,13 +9,15 @@
 body {
   margin:0;
   font-family: Arial;
-  background:#111;
+  background: url('background.jpg') no-repeat center center/cover;
   color:white;
   text-align:center;
 }
 
 .container {
   padding:40px;
+  background: rgba(0,0,0,0.6);
+  min-height:100vh;
 }
 
 input {
@@ -37,6 +39,12 @@ button {
 
 .call { background:#007bff; }
 .whatsapp { background:#25D366; }
+
+.cars img {
+  width:200px;
+  margin:15px;
+  border-radius:10px;
+}
 </style>
 </head>
 
@@ -50,6 +58,12 @@ button {
 
   <button class="call" onclick="window.location.href='tel:+306942874950'">Call</button>
   <button class="whatsapp" onclick="sendWhatsApp()">WhatsApp</button>
+
+  <div class="cars">
+    <img src="car1.jpg">
+    <img src="car2.jpg">
+    <img src="car3.jpg">
+  </div>
 </div>
 
 <script>
