@@ -6,9 +6,7 @@
 <title>RentSpot</title>
 
 <style>
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
@@ -33,12 +31,7 @@ body {
   color: white;
 }
 
-.box h2 {
-  margin-bottom: 15px;
-}
-
-.box select,
-.box input {
+.box input, .box select {
   width: 100%;
   padding: 10px;
   margin: 6px 0;
@@ -57,30 +50,17 @@ body {
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
-  display: block;
 }
 
-.call {
-  background: #1e90ff;
-}
-
-.whatsapp {
-  background: #25D366;
-}
-
-.review {
-  background: #444;
-}
+.call { background: #1e90ff; }
+.whatsapp { background: #25D366; }
+.review { background: #444; }
 
 /* CARS */
 .section {
   background: #d2c7b8;
   text-align: center;
   padding: 50px 20px;
-}
-
-.section h2 {
-  margin-bottom: 20px;
 }
 
 .cars {
@@ -105,12 +85,35 @@ body {
 /* WHY */
 .why {
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px;
   background: #f5f5f5;
 }
 
-.why h2 {
-  margin-bottom: 15px;
+/* REVIEWS */
+.reviews {
+  background: #d2c7b8;
+  padding: 40px;
+  text-align: center;
+}
+
+.review-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-box {
+  background: #eee;
+  padding: 15px;
+  border-radius: 12px;
+  width: 250px;
+}
+
+/* MAP */
+.map {
+  padding: 40px;
+  text-align: center;
 }
 </style>
 </head>
@@ -131,14 +134,8 @@ body {
     <input type="date" id="return">
 
     <button class="btn call" onclick="callNow()">Call Now</button>
-
-    <button class="btn whatsapp" onclick="sendWhatsApp()">
-      Book via WhatsApp
-    </button>
-
-    <button class="btn review" onclick="leaveReview()">
-      Leave a Review
-    </button>
+    <button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp</button>
+    <button class="btn review" onclick="leaveReview()">Leave a Review</button>
 
   </div>
 </div>
@@ -146,27 +143,22 @@ body {
 <!-- CARS -->
 <div class="section">
   <h2>Choose Your Car</h2>
-
   <div class="cars">
-
     <div class="car">
-      <img src="car1.jpg" alt="">
+      <img src="car1.jpg">
       <h3>Small</h3>
       <p>Perfect for city driving</p>
     </div>
-
     <div class="car">
-      <img src="car2.jpg" alt="">
+      <img src="car2.jpg">
       <h3>Medium</h3>
       <p>Comfort & economy</p>
     </div>
-
     <div class="car">
-      <img src="car3.jpg" alt="">
+      <img src="car3.jpg">
       <h3>Large</h3>
       <p>Ideal for families</p>
     </div>
-
   </div>
 </div>
 
@@ -174,10 +166,44 @@ body {
 <div class="why">
   <h2>Why Choose Us</h2>
   <p>
-    ✔ No Hidden Fees &nbsp;&nbsp;&nbsp;&nbsp;
-    ✔ Free Airport Pickup &nbsp;&nbsp;&nbsp;&nbsp;
+    ✔ No Hidden Fees &nbsp;&nbsp;&nbsp;
+    ✔ Free Airport Pickup &nbsp;&nbsp;&nbsp;
     ✔ 24/7 Support
   </p>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-boxes">
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐ <br>
+      Excellent service and friendly staff
+    </div>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐ <br>
+      Fast pickup and great prices
+    </div>
+
+    <div class="review-box">
+      ⭐⭐⭐⭐⭐ <br>
+      Smooth and easy experience
+    </div>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="map">
+  <h2>Find Us</h2>
+
+  <iframe
+    src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza&t=&z=15&ie=UTF8&iwloc=&output=embed"
+    width="90%"
+    height="300"
+    style="border:0; border-radius:10px;">
+  </iframe>
 </div>
 
 <!-- JS -->
@@ -198,7 +224,6 @@ function sendWhatsApp() {
 }
 
 function leaveReview() {
-  // ΒΑΛΕ ΤΟ PLACE ID ΣΟΥ ΕΔΩ
   window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
 </script>
