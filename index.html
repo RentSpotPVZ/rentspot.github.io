@@ -6,12 +6,8 @@
 <title>RentSpot</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial;
-}
+body { margin: 0; font-family: Arial; }
 
-/* HERO */
 .hero {
   background: url('beach.jpg') center/cover no-repeat;
   height: 100vh;
@@ -46,13 +42,15 @@ input, select {
 }
 
 .btn {
+  display: block;
   width: 100%;
   padding: 12px;
   border-radius: 25px;
   border: none;
   margin-top: 10px;
   color: white;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .call { background: #0a84ff; }
@@ -124,8 +122,8 @@ input, select {
   border-radius: 10px;
 }
 </style>
-
 </head>
+
 <body>
 
 <!-- HERO -->
@@ -143,8 +141,15 @@ input, select {
       <input type="date">
       <input type="date">
 
-      <button class="btn call">Call Now</button>
-      <button class="btn whatsapp">Book via WhatsApp</button>
+      <!-- 📞 CALL -->
+      <a href="tel:+306942874950" class="btn call">Call Now</a>
+
+      <!-- 💬 WHATSAPP -->
+      <a href="https://wa.me/306942874950?text=Hello%20I%20want%20to%20rent%20a%20car"
+         class="btn whatsapp" target="_blank">
+         Book via WhatsApp
+      </a>
+
     </div>
   </div>
 </div>
@@ -153,7 +158,6 @@ input, select {
 <div class="cars">
   <h2>Choose Your Car</h2>
   <div class="car-list">
-
     <div class="car">
       <img src="car1.jpg">
       <h3>Small</h3>
@@ -171,14 +175,13 @@ input, select {
       <h3>Large</h3>
       <p>Ideal for families</p>
     </div>
-
   </div>
 </div>
 
 <!-- WHY -->
 <div class="why">
   <h2>Why Choose Us</h2>
-  <p>✔ No Hidden Fees &nbsp;&nbsp; ✔ Free Airport Pickup &nbsp;&nbsp; ✔ 24/7 Support</p>
+  <p>✔ No Hidden Fees ✔ Free Airport Pickup ✔ 24/7 Support</p>
 </div>
 
 <!-- REVIEWS -->
@@ -186,22 +189,16 @@ input, select {
   <h2>Customer Reviews</h2>
 
   <div class="review-boxes">
-    <div class="review">⭐⭐⭐⭐⭐<br>Excellent service and friendly staff</div>
-    <div class="review">⭐⭐⭐⭐⭐<br>Fast pickup and great prices</div>
-    <div class="review">⭐⭐⭐⭐⭐<br>Smooth and easy experience</div>
+    <div class="review">⭐⭐⭐⭐⭐ Excellent service and friendly staff</div>
+    <div class="review">⭐⭐⭐⭐⭐ Fast pickup and great prices</div>
+    <div class="review">⭐⭐⭐⭐⭐ Smooth and easy experience</div>
   </div>
-
-  <br>
-  <button class="btn call">Leave a Review on Google</button>
 </div>
 
-<!-- MAP (FIXED LOCATION) -->
+<!-- MAP -->
 <div class="map">
   <h2>Find Us</h2>
-
-  <iframe
-    src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza%2048100&output=embed">
-  </iframe>
+  <iframe src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza%2048100&output=embed"></iframe>
 </div>
 
 </body>
