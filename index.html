@@ -6,220 +6,126 @@
 <title>RentSpot</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial;}
-
-body{
-  background:#f5f5f5;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: url('beach.jpg') center/cover no-repeat;
 }
 
-/* HERO */
-.hero{
-  height:100vh;
-  background:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+/* overlay */
+.overlay {
+  background: rgba(0,0,0,0.4);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.box{
-  background:rgba(0,0,0,0.75);
-  padding:30px;
-  border-radius:20px;
-  text-align:center;
-  color:white;
-  width:300px;
+/* box */
+.box {
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  width: 300px;
 }
 
-.box h1{
-  margin-bottom:10px;
+/* inputs */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: none;
 }
 
-.rating{
-  font-size:12px;
-  margin-bottom:15px;
-  color:gold;
+/* buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-input, select{
-  width:100%;
-  padding:10px;
-  margin:8px 0;
-  border-radius:8px;
-  border:none;
+.call { background: #007bff; }
+.whatsapp { background: #25D366; }
+
+/* cars section */
+.cars {
+  background: #eee;
+  padding: 40px;
+  text-align: center;
 }
 
-button{
-  width:100%;
-  padding:12px;
-  margin-top:10px;
-  border:none;
-  border-radius:20px;
-  color:white;
-  font-weight:bold;
-  cursor:pointer;
+.car-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.call{background:#007bff;}
-.whatsapp{background:#25D366;}
-
-/* CARS */
-.section{
-  padding:50px 20px;
-  text-align:center;
+.car {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
 }
 
-.cars{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:30px;
-  flex-wrap:wrap;
-}
-
-.card{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  width:220px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.card img{
-  width:100%;
-}
-
-.card h3{
-  margin-top:10px;
-}
-
-.card p{
-  font-size:13px;
-  color:#666;
-}
-
-/* FEATURES */
-.features{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:20px;
-  flex-wrap:wrap;
-}
-
-/* REVIEWS */
-.reviews{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:30px;
-  flex-wrap:wrap;
-}
-
-.review{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  width:250px;
-}
-
-/* MAP */
-.map{
-  margin-top:40px;
-}
-
-iframe{
-  width:100%;
-  height:300px;
-  border:0;
+.car img {
+  width: 100%;
+  border-radius: 10px;
 }
 </style>
 
 </head>
-
 <body>
 
-<!-- HERO -->
-<div class="hero">
+<div class="overlay">
   <div class="box">
-    <h1>RENTSPOT</h1>
-    <div class="rating">★★★★★ 4.9 / 5 (120 reviews)</div>
+    <h2>RENTSPOT</h2>
 
     <select>
       <option>Manual</option>
       <option>Automatic</option>
     </select>
 
-    <input type="date" id="pickup">
-    <input type="date" id="dropoff">
+    <input type="date">
+    <input type="date">
 
-    <button class="call" onclick="window.location.href='tel:+306942874950'">Call Now</button>
-    <button class="whatsapp" onclick="sendWhatsApp()">Book via WhatsApp</button>
+    <button class="btn call">Call Now</button>
+    <button class="btn whatsapp">Book via WhatsApp</button>
   </div>
 </div>
 
-<!-- CARS -->
-<div class="section">
+<div class="cars">
   <h2>Choose Your Car</h2>
 
-  <div class="cars">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?w=500">
+  <div class="car-list">
+
+    <div class="car">
+      <img src="car1.jpg">
       <h3>Small</h3>
       <p>Perfect for city driving</p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500">
+    <div class="car">
+      <img src="car2.jpg">
       <h3>Medium</h3>
       <p>Comfort & economy</p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=500">
+    <div class="car">
+      <img src="car3.jpg">
       <h3>Large</h3>
       <p>Ideal for families</p>
     </div>
+
   </div>
 </div>
-
-<!-- FEATURES -->
-<div class="section">
-  <h2>Why Choose Us</h2>
-  <div class="features">
-    <p>✔ No Hidden Fees</p>
-    <p>✔ Free Airport Pickup</p>
-    <p>✔ 24/7 Support</p>
-  </div>
-</div>
-
-<!-- REVIEWS -->
-<div class="section">
-  <h2>Customer Reviews</h2>
-
-  <div class="reviews">
-    <div class="review">★★★★★<br>"Excellent service and very friendly staff."</div>
-    <div class="review">★★★★★<br>"Fast pickup and great prices!"</div>
-    <div class="review">★★★★★<br>"Smooth and easy experience."</div>
-  </div>
-</div>
-
-<!-- MAP -->
-<div class="section map">
-  <h2>Find Us</h2>
-  <iframe src="https://maps.google.com/maps?q=Preveza&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
-</div>
-
-<script>
-function sendWhatsApp(){
-  let pickup = document.getElementById("pickup").value;
-  let dropoff = document.getElementById("dropoff").value;
-
-  let msg = "Hello, I want a car from " + pickup + " to " + dropoff;
-  let url = "https://wa.me/306942874950?text=" + encodeURIComponent(msg);
-
-  window.open(url, "_blank");
-}
-</script>
 
 </body>
 </html>
