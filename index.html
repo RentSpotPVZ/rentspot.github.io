@@ -60,7 +60,7 @@ body {
 .section {
   background: #d2c7b8;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
 .cars {
@@ -85,14 +85,34 @@ body {
 /* WHY */
 .why {
   text-align: center;
-  padding: 40px;
+  padding: 50px;
   background: #f5f5f5;
+}
+
+/* ✅ ABOUT FIXED */
+.about {
+  padding: 70px 20px;
+  text-align: center;
+  background: #ffffff;
+  border-top: 3px solid #ddd;
+  border-bottom: 3px solid #ddd;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+  font-size: 16px;
 }
 
 /* REVIEWS */
 .reviews {
   background: #d2c7b8;
-  padding: 40px;
+  padding: 50px;
   text-align: center;
 }
 
@@ -112,7 +132,7 @@ body {
 
 /* MAP */
 .map {
-  padding: 40px;
+  padding: 50px;
   text-align: center;
 }
 </style>
@@ -143,17 +163,20 @@ body {
 <!-- CARS -->
 <div class="section">
   <h2>Choose Your Car</h2>
+
   <div class="cars">
     <div class="car">
       <img src="car1.jpg">
       <h3>Small</h3>
       <p>Perfect for city driving</p>
     </div>
+
     <div class="car">
       <img src="car2.jpg">
       <h3>Medium</h3>
       <p>Comfort & economy</p>
     </div>
+
     <div class="car">
       <img src="car3.jpg">
       <h3>Large</h3>
@@ -169,6 +192,17 @@ body {
     ✔ No Hidden Fees &nbsp;&nbsp;&nbsp;
     ✔ Free Airport Pickup &nbsp;&nbsp;&nbsp;
     ✔ 24/7 Support
+  </p>
+</div>
+
+<!-- ✅ ABOUT (ΤΩΡΑ ΦΑΙΝΕΤΑΙ ΚΑΘΑΡΑ) -->
+<div class="about">
+  <h2>About Us</h2>
+  <p>
+    We are a trusted car rental service based in Preveza, offering reliable,
+    clean, and affordable vehicles for every need. Whether you're visiting
+    for holidays or need a car for daily use, we provide flexible options
+    and excellent customer service to make your experience smooth and easy.
   </p>
 </div>
 
@@ -206,7 +240,6 @@ body {
   </iframe>
 </div>
 
-<!-- JS -->
 <script>
 function callNow() {
   window.location.href = "tel:+306942874950";
