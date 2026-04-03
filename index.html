@@ -6,75 +6,94 @@
 <title>RentSpot</title>
 
 <style>
-body { margin: 0; font-family: Arial; }
-
-.hero {
-  background: url('beach.jpg') center/cover no-repeat;
-  height: 100vh;
-  position: relative;
+* {
+  box-sizing: border-box;
 }
 
-.overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* HERO */
+.hero {
+  background: url('beach.jpg') no-repeat center center/cover;
+  height: 100vh;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .box {
-  background: black;
+  background: rgba(0,0,0,0.75);
   padding: 25px;
   border-radius: 15px;
-  color: white;
-  width: 300px;
+  width: 260px;
   text-align: center;
+  color: white;
 }
 
-input, select {
+.box h2 {
+  margin-bottom: 15px;
+}
+
+.box select,
+.box input {
   width: 100%;
   padding: 10px;
-  margin: 8px 0;
+  margin: 6px 0;
   border-radius: 8px;
   border: none;
 }
 
+/* BUTTONS */
 .btn {
-  display: block;
   width: 100%;
   padding: 14px;
   border-radius: 25px;
   border: none;
   margin-top: 10px;
   color: white;
-  text-decoration: none;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
+  display: block;
 }
 
-.call { background: #0a84ff; }
-.whatsapp { background: #25D366; }
+.call {
+  background: #1e90ff;
+}
+
+.whatsapp {
+  background: #25D366;
+}
+
+.review {
+  background: #444;
+}
 
 /* CARS */
-.cars {
-  background: #cfc6b8;
-  padding: 50px;
+.section {
+  background: #d2c7b8;
   text-align: center;
+  padding: 50px 20px;
 }
 
-.car-list {
+.section h2 {
+  margin-bottom: 20px;
+}
+
+.cars {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .car {
-  background: #e8e3da;
+  background: #eee;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 12px;
   width: 200px;
 }
 
@@ -85,43 +104,13 @@ input, select {
 
 /* WHY */
 .why {
-  padding: 40px;
   text-align: center;
-  background: #ddd6cb;
+  padding: 40px 20px;
+  background: #f5f5f5;
 }
 
-/* REVIEWS */
-.reviews {
-  padding: 50px;
-  text-align: center;
-  background: #cfc6b8;
-}
-
-.review-boxes {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.review {
-  background: #e8e3da;
-  padding: 20px;
-  border-radius: 15px;
-  width: 250px;
-}
-
-/* MAP */
-.map {
-  padding: 40px;
-  background: #ddd6cb;
-  text-align: center;
-}
-
-.map iframe {
-  width: 100%;
-  height: 300px;
-  border: 0;
-  border-radius: 10px;
+.why h2 {
+  margin-bottom: 15px;
 }
 </style>
 </head>
@@ -130,98 +119,87 @@ input, select {
 
 <!-- HERO -->
 <div class="hero">
-  <div class="overlay">
-    <div class="box">
-      <h2>RENTSPOT</h2>
-      <p>⭐⭐⭐⭐⭐ 4.9/5 (120 reviews)</p>
+  <div class="box">
+    <h2>RENTSPOT</h2>
 
-      <select id="type">
-        <option>Manual</option>
-        <option>Automatic</option>
-      </select>
+    <select>
+      <option>Manual</option>
+      <option>Automatic</option>
+    </select>
 
-      <input type="date" id="from">
-      <input type="date" id="to">
+    <input type="date" id="pickup">
+    <input type="date" id="return">
 
-      <a href="tel:+306942874950" class="btn call">Call Now</a>
+    <button class="btn call" onclick="callNow()">Call Now</button>
 
-      <button onclick="sendWhatsApp()" class="btn whatsapp">
-        Book via WhatsApp
-      </button>
+    <button class="btn whatsapp" onclick="sendWhatsApp()">
+      Book via WhatsApp
+    </button>
 
-    </div>
+    <button class="btn review" onclick="leaveReview()">
+      Leave a Review
+    </button>
+
   </div>
 </div>
 
 <!-- CARS -->
-<div class="cars">
+<div class="section">
   <h2>Choose Your Car</h2>
-  <div class="car-list">
+
+  <div class="cars">
+
     <div class="car">
-      <img src="car1.jpg">
+      <img src="car1.jpg" alt="">
       <h3>Small</h3>
       <p>Perfect for city driving</p>
     </div>
 
     <div class="car">
-      <img src="car2.jpg">
+      <img src="car2.jpg" alt="">
       <h3>Medium</h3>
       <p>Comfort & economy</p>
     </div>
 
     <div class="car">
-      <img src="car3.jpg">
+      <img src="car3.jpg" alt="">
       <h3>Large</h3>
       <p>Ideal for families</p>
     </div>
+
   </div>
 </div>
 
 <!-- WHY -->
 <div class="why">
   <h2>Why Choose Us</h2>
-  <p>✔ No Hidden Fees ✔ Free Airport Pickup ✔ 24/7 Support</p>
+  <p>
+    ✔ No Hidden Fees &nbsp;&nbsp;&nbsp;&nbsp;
+    ✔ Free Airport Pickup &nbsp;&nbsp;&nbsp;&nbsp;
+    ✔ 24/7 Support
+  </p>
 </div>
 
-<!-- REVIEWS -->
-<div class="reviews">
-  <h2>Customer Reviews</h2>
-
-  <div class="review-boxes">
-    <div class="review">⭐⭐⭐⭐⭐ Excellent service and friendly staff</div>
-    <div class="review">⭐⭐⭐⭐⭐ Fast pickup and great prices</div>
-    <div class="review">⭐⭐⭐⭐⭐ Smooth and easy experience</div>
-  </div>
-
-  <br>
-
-  <!-- GOOGLE REVIEW BUTTON -->
-  <a href="https://search.google.com/local/writereview?placeid=ChIJPLACEID" 
-     target="_blank" class="btn call">
-     Leave a Review on Google
-  </a>
-
-</div>
-
-<!-- MAP -->
-<div class="map">
-  <h2>Find Us</h2>
-  <iframe src="https://maps.google.com/maps?q=Parmenionos%208%20Preveza%2048100&output=embed"></iframe>
-</div>
-
+<!-- JS -->
 <script>
+function callNow() {
+  window.location.href = "tel:+306942874950";
+}
+
 function sendWhatsApp() {
-  let type = document.getElementById("type").value;
-  let from = document.getElementById("from").value;
-  let to = document.getElementById("to").value;
+  let pickup = document.getElementById("pickup").value;
+  let ret = document.getElementById("return").value;
 
-  let message = `Hello, I want to rent a car.
-Type: ${type}
-From: ${from}
-To: ${to}`;
+  let message = "Hello! I want to book a car.%0A" +
+                "Pickup: " + pickup + "%0A" +
+                "Return: " + ret;
 
-  let url = "https://wa.me/306942874950?text=" + encodeURIComponent(message);
-  window.open(url, "_blank");
+  window.open("https://wa.me/306942874950?text=" + message, "_blank");
+}
+
+function leaveReview() {
+  // ΒΑΛΕ ΤΟ PLACE ID ΣΟΥ ΕΔΩ
+  window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
 </script>
 
