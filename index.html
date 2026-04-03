@@ -4,24 +4,60 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RentSpot</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial;
+  background:#111;
+  color:white;
+  text-align:center;
+}
+
+.container {
+  padding:40px;
+}
+
+input {
+  padding:10px;
+  margin:10px;
+  border-radius:8px;
+  border:none;
+}
+
+button {
+  padding:12px 20px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.call { background:#007bff; }
+.whatsapp { background:#25D366; }
+</style>
 </head>
 
 <body>
 
-<h1>RentSpot</h1>
+<div class="container">
+  <h1>RentSpot</h1>
 
-<input type="date" id="pickup"><br><br>
-<input type="date" id="dropoff"><br><br>
+  <input type="date" id="pickup"><br>
+  <input type="date" id="dropoff"><br>
 
-<button onclick="window.location.href='tel:+306942874950'">Call</button>
-<button onclick="sendWhatsApp()">WhatsApp</button>
+  <button class="call" onclick="window.location.href='tel:+306942874950'">Call</button>
+  <button class="whatsapp" onclick="sendWhatsApp()">WhatsApp</button>
+</div>
 
 <script>
 function sendWhatsApp(){
   let pickup = document.getElementById("pickup").value;
   let dropoff = document.getElementById("dropoff").value;
 
-  let msg = "Hello from " + pickup + " to " + dropoff;
+  let msg = "Hello, I want a car from " + pickup + " to " + dropoff;
   let url = "https://wa.me/306942874950?text=" + encodeURIComponent(msg);
 
   window.open(url, "_blank");
