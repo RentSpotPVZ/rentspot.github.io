@@ -345,7 +345,20 @@ flatpickr("#pickup", {
 
 flatpickr("#return", {
   minDate: "today",
-  defaultDate: new Date().fp_incr(1) // αύριο
+  defaultDate: new Date().fp_incr(1) 
+});
+const cards = document.querySelectorAll('.review-card');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+cards.forEach(card => {
+  observer.observe(card);
 });
 </script>
 
