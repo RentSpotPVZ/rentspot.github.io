@@ -178,8 +178,8 @@ body {
   <option value="Large">Large</option>
 </select>
 
-<input type="text" id="pickup" placeholder="Pickup Date">
-<input type="text" id="return" placeholder="Return Date">
+<input type="date" id="pickup">
+<input type="date" id="return">
 
 <button class="btn call" onclick="callNow()">Call Now</button>
 <button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp </button>
@@ -288,8 +288,15 @@ function leaveReview() {
   window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
 
-flatpickr("#pickup", { minDate: "today" });
-flatpickr("#return", { minDate: "today" });
+flatpickr("#pickup", {
+  minDate: "today",
+  defaultDate: "today"
+});
+
+flatpickr("#return", {
+  minDate: "today",
+  defaultDate: new Date().fp_incr(1) // αύριο
+});
 </script>
 
 </body>
