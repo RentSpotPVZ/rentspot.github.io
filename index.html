@@ -360,10 +360,15 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
-const cars = document.querySelectorAll('.car');
   
 cards.forEach(card => {
   observer.observe(card);
+});
+  
+const cars = document.querySelectorAll('.car');
+  
+cars.forEach(car => {
+  observer.observe(car);
 });
 </script>
 
