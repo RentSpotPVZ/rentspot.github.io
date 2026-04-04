@@ -6,7 +6,9 @@
 
 <title>Car Rental Preveza Airport (PVK) | RentSpot</title>
 
-<meta name="description" content="Car rental in Preveza and Aktion Airport (PVK). Book your car easily via WhatsApp. Pickup from Preveza Airport, hotel or city. Best prices available.">
+<meta name="description" content="Car rental in Preveza and Aktion Airport (PVK). Book your car easily via WhatsApp. Pickup from Preveza Airport, hotel or city. Best prices for small, medium and large cars.">
+
+<meta name="keywords" content="car rental preveza, preveza airport car rental, aktio airport car rental, rent a car preveza greece, PVK car rental, cheap car rental preveza airport">
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
@@ -27,8 +29,6 @@ body {
 
 .logo {
   width: 200px;
-  display: block;
-  margin: 0 auto;
 }
 
 /* HERO */
@@ -58,6 +58,7 @@ body {
   font-size: 14px;
 }
 
+/* BUTTONS */
 .btn {
   width: 100%;
   padding: 14px;
@@ -99,6 +100,49 @@ body {
   border-radius: 10px;
 }
 
+/* WHY */
+.why {
+  text-align: center;
+  padding: 50px;
+  background: #f5f5f5;
+}
+
+/* ABOUT */
+.about {
+  padding: 70px 20px;
+  text-align: center;
+  background: #ffffff;
+  border-top: 3px solid #ddd;
+  border-bottom: 3px solid #ddd;
+}
+
+.about p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+/* REVIEWS */
+.reviews {
+  background: #d2c7b8;
+  padding: 50px;
+  text-align: center;
+}
+
+.review-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.review-box {
+  background: #eee;
+  padding: 15px;
+  border-radius: 12px;
+  width: 250px;
+}
+
 /* MAP */
 .map {
   padding: 50px;
@@ -117,30 +161,34 @@ body {
 <!-- HERO -->
 <div class="hero">
   <div class="box">
-    <h1>RentSpot</h1>
+    <h1>RentSpot - Car Rental Preveza & Aktion Airport (PVK)</h1>
 
-    <select id="carType">
-      <option value="Manual">Manual</option>
-      <option value="Automatic">Automatic</option>
-    </select>
+<select id="carType">
+  <option value="Manual">Manual</option>
+  <option value="Automatic">Automatic</option>
+</select>
 
-    <select id="carCategory">
-      <option value="Small">Small</option>
-      <option value="Medium">Medium</option>
-      <option value="Large">Large</option>
-    </select>
+<select id="carCategory">
+  <option value="Small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+</select>
 
-    <input type="text" id="pickup" placeholder="Pickup Date">
-    <input type="text" id="return" placeholder="Return Date">
+<input type="text" id="pickup" placeholder="Pickup Date">
+<input type="text" id="return" placeholder="Return Date">
 
-    <button class="btn call" onclick="callNow()">📞 Call Now</button>
-    <button class="btn whatsapp" onclick="sendWhatsApp()">💬 Book via WhatsApp</button>
-    <button class="btn review" onclick="leaveReview()">⭐ Leave a Review</button>
-    <button class="btn" style="background:#ff9800;" onclick="checkAvailability()">🚗 Available Today</button>
+<button class="btn call" onclick="callNow()">Call Now</button>
+<button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp</button>
+<button class="btn review" onclick="leaveReview()">Leave a Review</button>
+<button class="btn" style="background:#ff9800;" onclick="checkAvailability()">Available Cars Today</button>
 
-    <p style="font-size:13px; margin-top:10px;">
-      Car Rental in Preveza & Aktion Airport (PVK)
-    </p>
+<h2>Car Rental in Preveza & Aktion Airport</h2>
+
+<p>
+Looking for car rental in Preveza or Aktion Airport (PVK)? RentSpot offers reliable and affordable cars 
+for your trip in Preveza, Lefkada and surrounding areas.
+</p>
+
   </div>
 </div>
 
@@ -169,10 +217,35 @@ body {
   </div>
 </div>
 
+<!-- WHY -->
+<div class="why">
+  <h2>Why Choose Us</h2>
+  <p>✔ No Hidden Fees ✔ Free Airport Pickup ✔ 24/7 Support</p>
+</div>
+
+<!-- ABOUT -->
+<div class="about">
+  <h2>About Us</h2>
+  <p>
+    We are a trusted car rental service based in Preveza, offering reliable,
+    clean, and affordable vehicles for every need.
+  </p>
+</div>
+
+<!-- REVIEWS -->
+<div class="reviews">
+  <h2>Customer Reviews</h2>
+
+  <div class="review-boxes">
+    <div class="review-box">⭐⭐⭐⭐⭐ Excellent service</div>
+    <div class="review-box">⭐⭐⭐⭐⭐ Great prices</div>
+    <div class="review-box">⭐⭐⭐⭐⭐ Smooth experience</div>
+  </div>
+</div>
+
 <!-- MAP -->
 <div class="map">
   <h2>Find Us</h2>
-
   <p><strong>Address:</strong> Parmenionos 8, Preveza 48100</p>
 
   <iframe
@@ -213,17 +286,8 @@ function leaveReview() {
   window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
 
-flatpickr("#pickup", {
-  minDate: "today",
-  altInput: true,
-  altFormat: "F j, Y"
-});
-
-flatpickr("#return", {
-  minDate: "today",
-  altInput: true,
-  altFormat: "F j, Y"
-});
+flatpickr("#pickup", { minDate: "today" });
+flatpickr("#return", { minDate: "today" });
 </script>
 
 </body>
