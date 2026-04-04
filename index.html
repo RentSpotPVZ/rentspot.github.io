@@ -175,8 +175,9 @@ body {
       <option>Automatic</option>
     </select>
 
-    <input type="date" id="pickup" placeholder="Pickup Date" required>
-    <input type="date" id="return" placeholder="Return Date" required>
+    <input type="text" id="pickup" placeholder="Pickup Date" onfocus="(this.type='date')" required>
+
+    <input type="text" id="return" placeholder="Return Date" onfocus="(this.type='date')" required>
 
     <button class="btn call" onclick="callNow()">Call Now</button>
     <button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp</button>
