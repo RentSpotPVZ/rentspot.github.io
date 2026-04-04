@@ -204,10 +204,14 @@ input::placeholder {
   <div class="box">
     <h2>RENTSPOT</h2>
 
-    <select>
-      <option>Manual</option>
-      <option>Automatic</option>
-    </select>
+<select id="carType">
+  <option value="Manual">Manual</option>
+  <option value="Automatic">Automatic</option>
+  <select id="carCategory">
+  <option value="Small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+</select>
 
 <div class="input-box">
   <label>Pickup Date</label>
@@ -309,10 +313,14 @@ function callNow() {
 function sendWhatsApp() {
     let pickup = document.getElementById("pickup").value;
     let ret = document.getElementById("return").value;
+    let carType = document.getElementById("carType").value;
+    let carCategory = document.getElementById("carCategory").value;
 
-    let message = "Hello! I want to book a car.%0A" +
-                  "Pickup: " + pickup + "%0A" +
-                  "Return: " + ret;
+    let message = "🚗 New Booking Request%0A%0A" +
+              "Category: " + carCategory + "%0A" +
+              "Transmission: " + carType + "%0A" +
+              "Pickup: " + pickup + "%0A" +
+              "Return: " + ret;
 
     window.open("https://wa.me/306942874950?text=" + message, "_blank");
 }
