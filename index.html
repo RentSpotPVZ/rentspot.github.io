@@ -150,6 +150,9 @@ body {
     <button class="btn call" onclick="callNow()">Call Now</button>
     <button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp</button>
     <button class="btn review" onclick="leaveReview()">Leave a Review</button>
+    <button class="btn" style="background:#ff9800;" onclick="checkAvailability()">
+  Available Cars Today
+</button>
 
   </div>
 </div>
@@ -226,22 +229,27 @@ body {
 
 <script>
 function callNow() {
-  window.location.href = "tel:+306942874950";
+    window.location.href = "tel:+306942874950";
 }
 
 function sendWhatsApp() {
-  let pickup = document.getElementById("pickup").value;
-  let ret = document.getElementById("return").value;
+    let pickup = document.getElementById("pickup").value;
+    let ret = document.getElementById("return").value;
 
-  let message = "Hello! I want to book a car.%0A" +
-                "Pickup: " + pickup + "%0A" +
-                "Return: " + ret;
+    let message = "Hello! I want to book a car.%0A" +
+                  "Pickup: " + pickup + "%0A" +
+                  "Return: " + ret;
 
-  window.open("https://wa.me/306942874950?text=" + message, "_blank");
+    window.open("https://wa.me/306942874950?text=" + message, "_blank");
+}
+
+function checkAvailability() {
+    let message = "Hello! Do you have cars available today?";
+    window.open("https://wa.me/306942874950?text=" + message, "_blank");
 }
 
 function leaveReview() {
-  window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
+    window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
 </script>
 
