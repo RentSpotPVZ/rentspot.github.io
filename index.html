@@ -46,6 +46,15 @@ body {
   font-family: Arial, sans-serif;
 }
 
+input[type="text"] {
+  color: black;
+}
+
+input::placeholder {
+  color: #555;
+  opacity: 1;
+}
+
 /* HERO */
 .hero {
   background: url('beach.jpg') no-repeat center center/cover;
@@ -287,15 +296,21 @@ function checkAvailability() {
 function leaveReview() {
     window.open("https://search.google.com/local/writereview?placeid=ChIJPLACEID", "_blank");
 }
-  flatpickr("#pickup", {
+  
+ flatpickr("#pickup", {
   minDate: "today",
-  dateFormat: "Y-m-d"
+  dateFormat: "Y-m-d",
+  altInput: true,
+  altFormat: "F j, Y"
 });
 
 flatpickr("#return", {
   minDate: "today",
-  dateFormat: "Y-m-d"
+  dateFormat: "Y-m-d",
+  altInput: true,
+  altFormat: "F j, Y"
 });
+  
 </script>
 
 </body>
