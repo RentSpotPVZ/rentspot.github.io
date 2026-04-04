@@ -127,11 +127,46 @@ body {
 /* REVIEWS */
 .reviews-section {
   background-color: #cbbba0;
-  padding: 80px 20px; 
+  padding: 80px 20px;
   text-align: center;
-  margin-top: 50px; 
+  margin-top: 50px;
   position: relative;
   z-index: 1;
+}
+
+/* 👇 ΒΑΛΕ ΤΑ ΕΔΩ */
+.reviews-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars {
+  margin-bottom: 10px;
+}
+
+.review-card p {
+  font-style: italic;
+}
+
+.review-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
 /* MAP */
@@ -236,25 +271,32 @@ body {
     height="300"
     style="border:0; border-radius:10px;">
   </iframe>
-  <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">
-        “Best prices in Preveza and super friendly service.”
-      </p>
-      <span class="review-author">– Mark, UK 🇬🇧</span>
+<div class="reviews-section">
+  <h2>Customer Reviews</h2>
+
+  <div class="reviews-container">
+
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>“Very smooth experience, picked up the car directly at Aktion airport.”</p>
+      <span>– Anna, Germany</span>
     </div>
 
     <div class="review-card">
-      <div class="stars">★★★★★</div>
-      <p class="review-text">
-        “Clean car and quick process, highly recommended!”
-      </p>
-      <span class="review-author">– Giorgos, Greece 🇬🇷</span>
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>“Best prices in Preveza and super friendly service.”</p>
+      <span>– Mark, UK</span>
+    </div>
+
+    <div class="review-card">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p>“Clean car and quick process, highly recommended!”</p>
+      <span>– Giorgos, Greece</span>
     </div>
 
   </div>
-</section>
 </div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
