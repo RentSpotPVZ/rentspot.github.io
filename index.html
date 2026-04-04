@@ -95,6 +95,12 @@ body {
   flex: 0 0 280px;
   opacity: 0;
   transform: translateY(40px);
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  background: white;
+  padding-bottom: 10px;
+  transition: 0.3s;
 }
 
 .car.show {
@@ -109,7 +115,11 @@ body {
   object-fit: cover;
   border-radius: 10px;
 }
+  
 
+.car:hover {
+  transform: translateY(-10px);
+}
 /* WHY */
 .why {
   text-align: center;
