@@ -301,14 +301,21 @@ function leaveReview() {
   minDate: "today",
   dateFormat: "Y-m-d",
   altInput: true,
-  altFormat: "F j, Y"
+  altFormat: "F j, Y",
+  altInputClass: "form-control",
+  onReady: function(selectedDates, dateStr, instance) {
+    instance.altInput.placeholder = "Pickup Date";
+  }
 });
 
 flatpickr("#return", {
   minDate: "today",
   dateFormat: "Y-m-d",
   altInput: true,
-  altFormat: "F j, Y"
+  altFormat: "F j, Y",
+  onReady: function(selectedDates, dateStr, instance) {
+    instance.altInput.placeholder = "Return Date";
+  }
 });
   
 </script>
