@@ -91,10 +91,14 @@ body {
 }
 
 .car {
-  background: #eee;
-  padding: 15px;
-  border-radius: 12px;
-  width: 200px;
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.car.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.6s ease;
 }
 
 .car img {
@@ -356,7 +360,8 @@ const observer = new IntersectionObserver(entries => {
     }
   });
 });
-
+const cars = document.querySelectorAll('.car');
+  
 cards.forEach(card => {
   observer.observe(card);
 });
