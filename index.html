@@ -302,10 +302,7 @@ function leaveReview() {
   dateFormat: "Y-m-d",
   altInput: true,
   altFormat: "F j, Y",
-  altInputClass: "form-control",
-  onReady: function(selectedDates, dateStr, instance) {
-    instance.altInput.placeholder = "Pickup Date";
-  }
+  defaultDate: "today"
 });
 
 flatpickr("#return", {
@@ -313,9 +310,7 @@ flatpickr("#return", {
   dateFormat: "Y-m-d",
   altInput: true,
   altFormat: "F j, Y",
-  onReady: function(selectedDates, dateStr, instance) {
-    instance.altInput.placeholder = "Return Date";
-  }
+  defaultDate: new Date().fp_incr(1) 
 });
   
 </script>
