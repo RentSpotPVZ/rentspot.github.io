@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Premium car rental in Preveza & Aktion Airport (PVK). Book instantly via WhatsApp. No hidden fees, free delivery, best prices guaranteed.">
+    <meta name="keywords" content="car rental preveza, preveza airport car rental, PVK rent a car, luxury car hire greece">
+    
+    <meta property="og:title" content="RentSpot Preveza | Premium Car Rental">
+    <meta property="og:description" content="Book your premium car in Preveza instantly via WhatsApp. Free airport delivery.">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" href="logo.png">
+    <title>RentSpot Preveza | Premium Car Rental</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- ============================================
+         GLOBAL CSS VARIABLES - EDIT THESE TO CUSTOMIZE
+         ============================================ -->
+    <style>
+        /* 
+         * THEME CUSTOMIZATION GUIDE
+         * Change these variables to rebrand the entire site
+         */
+        :root {
+            /* Primary Colors */
+            --color-primary: #0f172a;           /* Main dark color (nav, text, footer) */
+            --color-primary-light: #1e293b;     /* Lighter variant for hover states */
+            
+            /* Accent Colors */
+            --color-accent: #f97316;            /* Main CTA buttons, highlights */
+            --color-accent-hover: #ea580c;      /* Button hover state */
+            --color-accent-light: #fff7ed;      /* Light accent backgrounds */
+            
+            /* Secondary Accent (Ocean Blue) */
+            --color-secondary: #0ea5e9;         /* Secondary highlights, links */
+            --color-secondary-light: #e0f2fe;   /* Light secondary backgrounds */
+            
+            /* Semantic Colors */
+            --color-success: #22c55e;           /* Success states, WhatsApp */
+            --color-success-dark: #16a34a;      /* Darker green for hover */
+            --color-warning: #eab308;           /* Warnings, stars */
+            --color-danger: #ef4444;            /* Errors, alerts */
+            
+            /* Neutral Colors */
+            --color-bg: #f8fafc;                /* Page background */
+            --color-surface: #ffffff;           /* Cards, surfaces */
+            --color-surface-alt: #f1f5f9;       /* Alternate surfaces (cards bg) */
+            --color-text: #0f172a;              /* Main text color */
+            --color-text-muted: #64748b;        /* Secondary text */
+            --color-text-light: #94a3b8;        /* Placeholder, disabled text */
+            --color-border: #e2e8f0;            /* Borders, dividers */
+            
+            /* Typography */
+            --font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+            --font-size-xs: 0.75rem;            /* 12px */
+            --font-size-sm: 0.875rem;           /* 14px */
+            --font-size-base: 1rem;             /* 16px */
+            --font-size-lg: 1.125rem;           /* 18px */
+            --font-size-xl: 1.25rem;            /* 20px */
+            --font-size-2xl: 1.5rem;            /* 24px */
+            --font-size-3xl: 1.875rem;          /* 30px */
+            --font-size-4xl: 2.25rem;           /* 36px */
+            --font-size-5xl: 3rem;              /* 48px */
+            --font-size-6xl: 3.75rem;           /* 60px */
+            
+            --font-weight-normal: 400;
+            --font-weight-medium: 500;
+            --font-weight-semibold: 600;
+            --font-weight-bold: 700;
+            --font-weight-extrabold: 800;
+            
+            /* Spacing Scale */
+            --space-1: 0.25rem;                 /* 4px */
+            --space-2: 0.5rem;                  /* 8px */
+            --space-3: 0.75rem;                 /* 12px */
+            --space-4: 1rem;                    /* 16px */
+            --space-5: 1.25rem;                 /* 20px */
+            --space-6: 1.5rem;                  /* 24px */
+            --space-8: 2rem;                    /* 32px */
+            --space-10: 2.5rem;                 /* 40px */
+            --space-12: 3rem;                   /* 48px */
+            --space-16: 4rem;                   /* 64px */
+            --space-20: 5rem;                   /* 80px */
+            --space-24: 6rem;                   /* 96px */
+            
+            /* Border Radius */
+            --radius-sm: 0.375rem;              /* 6px */
+            --radius-md: 0.5rem;                /* 8px */
+            --radius-lg: 0.75rem;               /* 12px */
+            --radius-xl: 1rem;                  /* 16px */
+            --radius-2xl: 1.5rem;               /* 24px */
+            --radius-3xl: 2rem;                 /* 32px */
+            --radius-full: 9999px;              /* Full rounded */
+            
+            /* Shadows */
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            --shadow-accent: 0 10px 30px -10px var(--color-accent);
+            
+            /* Transitions */
+            --transition-fast: 150ms ease;
+            --transition-base: 300ms ease;
+            --transition-slow: 500ms ease;
+            
+            /* Z-Index Scale */
+            --z-dropdown: 100;
+            --z-sticky: 200;
+            --z-fixed: 300;
+            --z-modal-backdrop: 400;
+            --z-modal: 500;
+            --z-popover: 600;
+            --z-tooltip: 700;
+            --z-toast: 800;
+            
+            /* Layout */
+            --container-max: 1280px;            /* max-w-7xl equivalent */
+            --header-height: 80px;
+            
+            /* Hero Section */
+            --hero-overlay-opacity: 0.6;
+            --hero-gradient-start: rgba(15, 23, 42, 0.8);
+            --hero-gradient-end: rgba(15, 23, 42, 0.4);
+            
+            /* Glass Effect */
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-blur: 20px;
+            
+            /* Animation Durations */
+            --animate-duration-fast: 0.3s;
+            --animate-duration-normal: 0.5s;
+            --animate-duration-slow: 0.8s;
+        }
+
+        /* Dark Mode Support (Optional) */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                /* Uncomment to enable dark mode by default */
+                /* --color-bg: #0f172a;
+                --color-surface: #1e293b;
+                --color-text: #f8fafc; */
+            }
+        }
+
+        /* ============================================
+           BASE STYLES
+           ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-family: var(--font-family);
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ============================================
+           UTILITY CLASSES USING CSS VARIABLES
+           ============================================ */
+        
+        /* Background Colors */
+        .bg-primary { background-color: var(--color-primary); }
+        .bg-accent { background-color: var(--color-accent); }
+        .bg-surface { background-color: var(--color-surface); }
+        .bg-surface-alt { background-color: var(--color-surface-alt); }
+        
+        /* Text Colors */
+        .text-primary { color: var(--color-primary); }
+        .text-accent { color: var(--color-accent); }
+        .text-muted { color: var(--color-text-muted); }
+        .text-light { color: var(--color-text-light); }
+        
+        /* Border Colors */
+        .border-default { border-color: var(--color-border); }
+        
+        /* ============================================
+           COMPONENT CLASSES
+           ============================================ */
+        
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-2);
+            padding: var(--space-3) var(--space-6);
+            border-radius: var(--radius-full);
+            font-weight: var(--font-weight-bold);
+            font-size: var(--font-size-base);
+            transition: all var(--transition-base);
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-hover) 100%);
+            color: white;
+            box-shadow: var(--shadow-accent);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px -10px var(--color-accent);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-surface);
+            color: var(--color-primary);
+            border: 2px solid var(--color-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--color-primary);
+            background-color: var(--color-surface-alt);
+        }
+
+        .btn-ghost {
+            background-color: transparent;
+            color: var(--color-text);
+        }
+
+        .btn-ghost:hover {
+            background-color: var(--color-surface-alt);
+        }
+
+        /* Cards */
+        .card {
+            background-color: var(--color-surface);
+            border-radius: var(--radius-3xl);
+            padding: var(--space-8);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-base);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        /* Glass Effect */
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid var(--glass-border);
+        }
+
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(var(--glass-blur));
+            -webkit-backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Form Elements */
+        .input {
+            width: 100%;
+            padding: var(--space-4);
+            background-color: var(--color-surface-alt);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-xl);
+            font-size: var(--font-size-base);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text);
+            transition: all var(--transition-base);
+        }
+
+        .input:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Section Spacing */
+        .section {
+            padding: var(--space-24) 0;
+        }
+
+        .section-sm {
+            padding: var(--space-16) 0;
+        }
+
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+
+        @media (min-width: 640px) {
+            .container {
+                padding: 0 var(--space-6);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 var(--space-8);
+            }
+        }
+
+        /* Typography Utilities */
+        .heading-1 {
+            font-size: var(--font-size-5xl);
+            font-weight: var(--font-weight-extrabold);
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .heading-2 {
+            font-size: var(--font-size-4xl);
+            font-weight: var(--font-weight-extrabold);
+            line-height: 1.2;
+        }
+
+        .heading-3 {
+            font-size: var(--font-size-2xl);
+            font-weight: var(--font-weight-bold);
+        }
+
+        .text-body {
+            font-size: var(--font-size-lg);
+            color: var(--color-text-muted);
+            line-height: 1.7;
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animations */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(34, 197, 94, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+        }
+
+        .animate-fade-up {
+            animation: fadeUp var(--animate-duration-slow) ease-out forwards;
+        }
+
+        .animate-slide-in {
+            animation: slideIn var(--animate-duration-normal) ease-out forwards;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .whatsapp-pulse {
+            animation: pulse-green 2s infinite;
+        }
+
+        /* Scroll Reveal */
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all var(--animate-duration-slow) ease-out;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Navigation States */
+        .nav-transparent {
+            background: transparent;
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(var(--glass-blur));
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-scrolled .nav-link {
+            color: var(--color-primary);
+        }
+
+        .nav-scrolled .logo-text {
+            color: var(--color-primary);
+        }
+
+        /* Hero Background */
+        .hero-bg {
+            background-image: linear-gradient(to bottom, var(--hero-gradient-start), var(--hero-gradient-end)), 
+                              url('beach.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Feature Icon */
+        .feature-icon {
+            transition: all var(--transition-base);
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1) rotate(5deg);
+            color: var(--color-accent);
+        }
+
+        /* Car Card */
+        .car-card {
+            transition: all var(--animate-duration-normal) cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .car-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-border);
+            border-radius: var(--radius-full);
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--color-text-muted);
+        }
+
+        /* Selection Color */
+        ::selection {
+            background-color: var(--color-accent);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-[300] transition-all duration-300 nav-transparent">
+        <div class="container">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <div class=" w-16 h-16"> <img src="logo.png" class="w-full h-full object-cover rounded-md"> </div>
+                    <div class="hidden w-10 h-10 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-secondary)] rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:scale-110 transition-transform">
+                        R
+                    </div>
+                    <div class="leading-tight">
+                        <span class="logo-text text-2xl font-extrabold text-white block transition-colors">RentSpot</span>
+                        <span class="text-xs text-slate-500 tracking-[0.2em] font-semibold uppercase">Preveza</span>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#fleet" class="nav-link text-white/90 hover:text-[var(--color-accent)] font-medium transition-colors">Our Fleet</a>
+                    <a href="#why-us" class="nav-link text-white/90 hover:text-[var(--color-accent)] font-medium transition-colors">Why Us</a>
+                    <a href="#reviews" class="nav-link text-white/90 hover:text-[var(--color-accent)] font-medium transition-colors">Reviews</a>
+                    <a href="#contact" class="nav-link text-white/90 hover:text-[var(--color-accent)] font-medium transition-colors">Contact</a>
+                </div>
+                
+                <!-- CTA Buttons -->
+                <div class="flex items-center gap-3">
+                    <button onclick="callNow()" class="hidden sm:flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 hover:bg-white/20 text-orange font-semibold backdrop-blur-sm transition-all border border-white/20">
+                        <i class="fas fa-phone text-sm"></i>
+                        <span>Call</span>
+                    </button>
+                    <button onclick="scrollToBooking()" class="btn btn-primary">
+                        <i class="fab fa-whatsapp text-lg"></i>
+                        <span>Book Now</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center hero-bg overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-[var(--color-primary)]/60 via-[var(--color-primary)]/40 to-[var(--color-primary)]/80"></div>
+        
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-[var(--color-accent)]/20 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-secondary)]/20 rounded-full blur-3xl animate-float" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 container pt-20">
+            <div class="text-center mb-12">                
+                <h1 class="heading-1 text-white mb-6 animate-fade-up" style="animation-delay: 0.1s;">
+                    Drive Your <span class="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-accent)] to-orange-300">Freedom</span><br>
+                    in Preveza
+                </h1>
+                
+                <p class="text-xl text-slate-200 max-w-2xl mx-auto mb-8 animate-fade-up" style="animation-delay: 0.2s;">
+                    Premium car rental delivered to your location in minutes. No hidden fees, instant WhatsApp booking, 24/7 support.
+                </p>
+                
+                <!-- Trust Badges -->
+                <div class="flex flex-wrap justify-center gap-6 text-white/80 text-sm font-medium animate-fade-up" style="animation-delay: 0.3s;">
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[var(--color-accent)]"></i> Free Delivery</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[var(--color-accent)]"></i> Best Price Guarantee</span>
+                    <span class="flex items-center gap-2"><i class="fas fa-check-circle text-[var(--color-accent)]"></i> Instant Confirmation</span>
+                </div>
+
+                <div class="pt-10">
+                <div class="inline-flex items-center gap-2 px-8 py-4 rounded-full glass text-white/90 text-sm font-medium mb-6 animate-fade-up">
+                    <span class="w-2 h-2 bg-[var(--color-success)] rounded-full animate-pulse"></span>
+                    Available Now at Aktion Airport (PVK)
+                </div>
+                </div>
+                
+            </div>
+
+            <!-- Booking Widget -->
+            <div id="booking-widget" class="glass rounded-3xl p-2 max-w-5xl mx-auto animate-fade-up shadow-2xl" style="animation-delay: 0.4s;">
+                <div class="bg-white/95 backdrop-blur-xl rounded-2xl p-6 md:p-8">
+                    <div class="grid md:grid-cols-12 gap-4 items-end">
+                        <!-- Car Type -->
+                        <div class="md:col-span-3">
+                            <label class="block text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Transmission</label>
+                            <div class="relative">
+                                <i class="fas fa-cog absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)]"></i>
+                                <select id="carType" class="input pl-11 appearance-none cursor-pointer">
+                                    <option value="Manual">Manual Transmission</option>
+                                    <option value="Automatic">Automatic</option>
+                                </select>
+                                <i class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)] pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="md:col-span-3">
+                            <label class="block text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Car Size</label>
+                            <div class="relative">
+                                <i class="fas fa-car absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)]"></i>
+                                <select id="carCategory" class="input pl-11 appearance-none cursor-pointer">
+                                    <option value="Small">Compact (City)</option>
+                                    <option value="Medium">Mid-size (Comfort)</option>
+                                    <option value="Large">SUV/Large (Family)</option>
+                                </select>
+                                <i class="fas fa-chevron-down absolute right-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)] pointer-events-none"></i>
+                            </div>
+                        </div>
+
+                        <!-- Pickup Date -->
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Pickup</label>
+                            <div class="relative">
+                                <i class="fas fa-calendar absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)]"></i>
+                                <input id="pickup" placeholder="Select date" class="input pl-11 cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Return Date -->
+                        <div class="md:col-span-2">
+                            <label class="block text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mb-2">Return</label>
+                            <div class="relative">
+                                <i class="fas fa-calendar-check absolute left-4 top-1/2 -translate-y-1/2 text-[var(--color-text-light)]"></i>
+                                <input id="return" placeholder="Select date" class="input pl-11 cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="md:col-span-2">
+                            <button onclick="sendWhatsApp()" class="w-full btn btn-primary py-4 text-sm">
+                                <i class="fab fa-whatsapp"></i>
+                                <span>Get a Price</span>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 flex items-center justify-center gap-6 text-xs text-[var(--color-text-muted)]">
+                        <span class="flex items-center gap-1"><i class="fas fa-shield-alt text-[var(--color-accent)]"></i> Secure Booking</span>
+                        <span class="flex items-center gap-1"><i class="fas fa-clock text-[var(--color-accent)]"></i> Response in 2 min</span>
+                        <span class="flex items-center gap-1"><i class="fas fa-ban text-[var(--color-accent)]"></i> Free Cancellation</span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b border-[var(--color-border)]">
+        <div class="container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="scroll-reveal">
+                    <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-1">500+</div>
+                    <div class="text-sm text-[var(--color-text-muted)] font-medium">Happy Customers</div>
+                </div>
+                <div class="scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-1">50+</div>
+                    <div class="text-sm text-[var(--color-text-muted)] font-medium">Premium Cars</div>
+                </div>
+                <div class="scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-1">4.9★</div>
+                    <div class="text-sm text-[var(--color-text-muted)] font-medium">Average Rating</div>
+                </div>
+                <div class="scroll-reveal" style="transition-delay: 0.3s;">
+                    <div class="text-4xl font-extrabold text-[var(--color-primary)] mb-1">24/7</div>
+                    <div class="text-sm text-[var(--color-text-muted)] font-medium">Support</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="why-us" class="section bg-[var(--color-bg)]">
+        <div class="container">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="heading-2 text-[var(--color-primary)] mt-2 mb-4">The RentSpot Advantage</h2>
+                <p class="text-body max-w-2xl mx-auto">Experience car rental the way it should be — simple, transparent, and tailored to your needs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="feature-card card card-hover scroll-reveal group">
+                    <div class="w-16 h-16 bg-[var(--color-accent-light)] rounded-2xl flex items-center justify-center mb-6 feature-icon text-[var(--color-accent)]">
+                        <i class="fas fa-tag text-2xl"></i>
+                    </div>
+                    <h3 class="heading-3 text-[var(--color-primary)] mb-3">Transparent Pricing</h3>
+                    <p class="text-[var(--color-text-muted)] leading-relaxed">No hidden fees, no surprises. The price you see is the price you pay. Full insurance included in every quote.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card card card-hover scroll-reveal group" style="transition-delay: 0.1s;">
+                    <div class="w-16 h-16 bg-[var(--color-secondary-light)] rounded-2xl flex items-center justify-center mb-6 feature-icon text-[var(--color-secondary)]">
+                        <i class="fas fa-plane-arrival text-2xl"></i>
+                    </div>
+                    <h3 class="heading-3 text-[var(--color-primary)] mb-3">Free Airport Delivery</h3>
+                    <p class="text-[var(--color-text-muted)] leading-relaxed">We meet you at Aktion Airport (PVK) or your hotel. No waiting in lines, no shuttle buses — your car, your way.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card card card-hover scroll-reveal group" style="transition-delay: 0.2s;">
+                    <div class="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6 feature-icon text-[var(--color-success)]">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                    </div>
+                    <h3 class="heading-3 text-[var(--color-primary)] mb-3">Instant WhatsApp Support</h3>
+                    <p class="text-[var(--color-text-muted)] leading-relaxed">Book, modify, or ask questions instantly. Real humans, real fast — average response time under 2 minutes.</p>
+                </div>
+            </div>
+
+            <!-- Additional Benefits -->
+            <div class="mt-16 grid md:grid-cols-4 gap-4 scroll-reveal">
+                <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                    <i class="fas fa-check-circle text-[var(--color-success)] text-xl"></i>
+                    <span class="font-semibold text-[var(--color-primary)]">Meet & Greet Service</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                    <i class="fas fa-check-circle text-[var(--color-success)] text-xl"></i>
+                    <span class="font-semibold text-[var(--color-primary)]">Local Expertise</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                    <i class="fas fa-check-circle text-[var(--color-success)] text-xl"></i>
+                    <span class="font-semibold text-[var(--color-primary)]">Clean & Sanitized Cars</span>
+                </div>
+                <div class="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm">
+                    <i class="fas fa-check-circle text-[var(--color-success)] text-xl"></i>
+                    <span class="font-semibold text-[var(--color-primary)]">Flexible Payment</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Section -->
+    <section id="fleet" class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider">Our Fleet</span>
+                <h2 class="heading-2 text-[var(--color-primary)] mt-2 mb-4">Choose Your Perfect Ride</h2>
+                <p class="text-body max-w-2xl mx-auto">From compact city cars to spacious family , all meticulously maintained and ready for your adventure.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Small Car -->
+                <div class="car-card bg-[var(--color-surface-alt)] rounded-3xl overflow-hidden shadow-lg group scroll-reveal">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="car1.jpg" alt="Compact Car" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-[var(--color-primary)]">Most Popular</div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <span class="text-white font-bold text-lg"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[var(--color-primary)] mb-2">Compact City</h3>
+                        <p class="text-[var(--color-text-muted)] mb-4">Perfect for navigating Preveza's charming streets and finding parking with ease.</p>
+                        <div class="flex gap-4 text-sm text-[var(--color-text-muted)] mb-6">
+                            <span class="flex items-center gap-1"><i class="fas fa-user"></i> 4 Seats</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-suitcase"></i> 2 Bags</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-gas-pump"></i> Efficient</span>
+                        </div>
+                        <button onclick="selectCar('Small')" class="w-full py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-bold hover:bg-[var(--color-primary)] hover:text-white transition-all">
+                            Select This Car
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Medium Car -->
+                <div class="car-card bg-[var(--color-surface-alt)] rounded-3xl overflow-hidden shadow-lg group scroll-reveal" style="transition-delay: 0.1s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="car2.jpg" alt="Mid-size Car" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <span class="text-white font-bold text-lg"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[var(--color-primary)] mb-2">Comfort Sedan</h3>
+                        <p class="text-[var(--color-text-muted)] mb-4">Ideal balance of comfort and economy. Great for longer drives along the coast.</p>
+                        <div class="flex gap-4 text-sm text-[var(--color-text-muted)] mb-6">
+                            <span class="flex items-center gap-1"><i class="fas fa-user"></i> 5 Seats</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-suitcase"></i> 3 Bags</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-snowflake"></i> A/C</span>
+                        </div>
+                        <button onclick="selectCar('Medium')" class="w-full py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-bold hover:bg-[var(--color-primary)] hover:text-white transition-all">
+                            Select This Car
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Large Car -->
+                <div class="car-card bg-[var(--color-surface-alt)] rounded-3xl overflow-hidden shadow-lg group scroll-reveal" style="transition-delay: 0.2s;">
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="car3.jpg" alt="SUV" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute top-4 right-4 bg-[var(--color-accent)] text-white px-3 py-1 rounded-full text-xs font-bold">Family Choice</div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+                            <span class="text-white font-bold text-lg"></span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-[var(--color-primary)] mb-2">Family </h3>
+                        <p class="text-[var(--color-text-muted)] mb-4">Spacious, powerful, and comfortable. Perfect for family adventures and exploring the region.</p>
+                        <div class="flex gap-4 text-sm text-[var(--color-text-muted)] mb-6">
+                            <span class="flex items-center gap-1"><i class="fas fa-user"></i> 7 Seats</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-suitcase"></i> 4 Bags</span>
+                            <span class="flex items-center gap-1"><i class="fas fa-mountain"></i> 4WD</span>
+                        </div>
+                        <button onclick="selectCar('Large')" class="w-full py-3 rounded-xl border-2 border-[var(--color-primary)] text-[var(--color-primary)] font-bold hover:bg-[var(--color-primary)] hover:text-white transition-all">
+                            Select This Car
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="contact" class="section bg-[var(--color-bg)]">
+        <div class="container">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="scroll-reveal">
+                    <span class="text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider">Location</span>
+                    <h2 class="heading-2 text-[var(--color-primary)] mt-2 mb-6">Find Us in Preveza</h2>
+                    <p class="text-body mb-8">Conveniently located to serve Aktion Airport (PVK) and the greater Preveza area. We deliver to your hotel, airport, or preferred location.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-[var(--color-accent-light)] rounded-xl flex items-center justify-center flex-shrink-0 text-[var(--color-accent)]">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--color-primary)]">Main Office</h4>
+                                <p class="text-[var(--color-text-muted)]">Preveza City Center, Greece</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center flex-shrink-0 text-[var(--color-success)]">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--color-primary)]">WhatsApp</h4>
+                                <p class="text-[var(--color-text-muted)]">+30 694 287 4950</p>
+                                <span class="text-xs text-[var(--color-success)] font-semibold">● Available Now</span>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-[var(--color-secondary-light)] rounded-xl flex items-center justify-center flex-shrink-0 text-[var(--color-secondary)]">
+                                <i class="fas fa-phone text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-[var(--color-primary)]">Phone</h4>
+                                <p class="text-[var(--color-text-muted)]">+30 694 287 4950</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button onclick="sendWhatsApp()" class="mt-8 btn btn-primary text-lg">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        <span>Get Directions on WhatsApp</span>
+                    </button>
+                </div>
+                
+                <div class="scroll-reveal relative">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-secondary)] rounded-3xl opacity-20 blur-2xl"></div>
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Preveza,Aktion+Airport&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                        class="w-full h-96 rounded-3xl shadow-2xl border-0 relative z-10 grayscale hover:grayscale-0 transition-all duration-500"
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="section bg-white">
+        <div class="container">
+            <div class="text-center mb-16 scroll-reveal">
+                <span class="text-[var(--color-accent)] font-bold text-sm uppercase tracking-wider">Testimonials</span>
+                <h2 class="heading-2 text-[var(--color-primary)] mt-2 mb-4">What Our Customers Say</h2>
+                <div class="flex items-center justify-center gap-1 text-[var(--color-warning)] text-2xl mb-4">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span class="text-[var(--color-text-muted)] text-lg ml-2 font-semibold">4.9/5 from 200+ reviews</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-[var(--color-surface-alt)] p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all scroll-reveal relative">
+                    <div class="absolute -top-4 left-8 bg-[var(--color-accent)] text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-serif">"</div>
+                    <div class="flex text-[var(--color-warning)] mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-[var(--color-text)] mb-6 leading-relaxed">"Amazing service! The car was waiting for us at the airport exactly as promised. No paperwork hassle, just WhatsApp communication. Will definitely use again!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[var(--color-accent)] to-orange-300 rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <div>
+                            <div class="font-bold text-[var(--color-primary)]">Anna K.</div>
+                            <div class="text-sm text-[var(--color-text-muted)]">Athens, Greece</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-[var(--color-surface-alt)] p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all scroll-reveal relative" style="transition-delay: 0.1s;">
+                    <div class="absolute -top-4 left-8 bg-[var(--color-accent)] text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-serif">"</div>
+                    <div class="flex text-[var(--color-warning)] mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-[var(--color-text)] mb-6 leading-relaxed">"Best prices in Preveza by far! The car was spotless and ran perfectly. The WhatsApp support was incredibly responsive. Highly recommended for anyone visiting."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[var(--color-secondary)] to-blue-400 rounded-full flex items-center justify-center text-white font-bold">M</div>
+                        <div>
+                            <div class="font-bold text-[var(--color-primary)]">Mark T.</div>
+                            <div class="text-sm text-[var(--color-text-muted)]">London, UK</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-[var(--color-surface-alt)] p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all scroll-reveal relative" style="transition-delay: 0.2s;">
+                    <div class="absolute -top-4 left-8 bg-[var(--color-accent)] text-white w-10 h-10 rounded-full flex items-center justify-center text-xl font-serif">"</div>
+                    <div class="flex text-[var(--color-warning)] mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-[var(--color-text)] mb-6 leading-relaxed">"Professional, friendly, and reliable. They delivered the car to our hotel and picked it up when we left. Made our vacation so much easier. Thank you!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 bg-gradient-to-br from-[var(--color-success)] to-emerald-400 rounded-full flex items-center justify-center text-white font-bold">G</div>
+                        <div>
+                            <div class="font-bold text-[var(--color-primary)]">Giorgos P.</div>
+                            <div class="text-sm text-[var(--color-text-muted)]">Thessaloniki, Greece</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-[var(--color-primary)] relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-[var(--color-accent)] rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-[var(--color-secondary)] rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        </div>
+        
+        <div class="container text-center relative z-10 scroll-reveal">
+            <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-6">Ready to Hit the Road?</h2>
+            <p class="text-xl text-slate-300 mb-10">Get your a price via WhatsApp in under 2 minutes. No obligations, no hidden fees.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="sendWhatsApp()" class="btn btn-primary text-xl px-10 py-5">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Get a price</span>
+                </button>
+                <button onclick="callNow()" class="btn px-10 py-5 bg-white/10 hover:bg-white/20 text-white border border-white/20 backdrop-blur-sm">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Now</span>
+                </button>
+            </div>
+            
+            <p class="mt-8 text-slate-400 text-sm">
+                <i class="fas fa-shield-alt mr-2"></i>Secure booking • Free cancellation • 24/7 support
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[var(--color-primary)] text-slate-300 py-12 border-t border-slate-800">
+        <div class="container">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="hidden w-8 h-8 bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-secondary)] rounded-lg flex items-center justify-center text-white font-bold">R</div>
+                        <span class="text-xl font-bold text-white">RentSpot</span>
+                    </div>
+                    <p class="text-sm text-slate-400">Premium car rental services in Preveza and Aktion Airport. Your journey starts here.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#fleet" class="hover:text-[var(--color-accent)] transition-colors">Our Fleet</a></li>
+                        <li><a href="#why-us" class="hover:text-[var(--color-accent)] transition-colors">Why Choose Us</a></li>
+                        <li><a href="#reviews" class="hover:text-[var(--color-accent)] transition-colors">Reviews</a></li>
+                        <li><a href="#contact" class="hover:text-[var(--color-accent)] transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>Airport Pickup</li>
+                        <li>Hotel Delivery</li>
+                        <li>One-Way Rental</li>
+                        <li>Long-term Lease</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-center gap-2"><i class="fab fa-whatsapp text-[var(--color-success)]"></i> +30 694 287 4950</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone text-[var(--color-secondary)]"></i> +30 694 287 4950</li>
+                        <li>Preveza, Greece</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-sm text-slate-500">© 2024 RentSpot Preveza. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[var(--color-accent)] transition-colors">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[var(--color-accent)] transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-[var(--color-success)] transition-colors">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/306942874950" class="fixed bottom-6 right-6 bg-[var(--color-success)] hover:bg-[var(--color-success-dark)] text-white px-6 py-4 rounded-full shadow-2xl z-[800] flex items-center gap-3 font-bold transition-all hover:scale-105 whatsapp-pulse group">
+        <i class="fab fa-whatsapp text-2xl"></i>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap">Chat with us</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        // Initialize Flatpickr
+        flatpickr("#pickup", { 
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            disableMobile: "true"
+        });
+        
+        flatpickr("#return", { 
+            minDate: "today",
+            dateFormat: "Y-m-d",
+            disableMobile: "true"
+        });
+
+        // Navigation scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('nav-transparent');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('nav-transparent');
+            }
+        });
+
+        // Scroll reveal animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((el) => observer.observe(el));
+
+        // Functions
+        function callNow() {
+            window.location.href = "tel:+306942874950";
+        }
+
+        function scrollToBooking() {
+            document.getElementById('booking-widget').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function selectCar(category) {
+            document.getElementById('carCategory').value = category;
+            scrollToBooking();
+            // Flash effect on booking widget
+            const widget = document.getElementById('booking-widget');
+            widget.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+                widget.style.transform = 'scale(1)';
+            }, 200);
+        }
+
+        function sendWhatsApp() {
+            let pickup = document.getElementById("pickup").value;
+            let ret = document.getElementById("return").value;
+            let carType = document.getElementById("carType").value;
+            let carCategory = document.getElementById("carCategory").value;
+
+            let message = `🚗 *Car Rental Request*%0A%0A` +
+                `*Category:* ${carCategory}%0A` +
+                `*Transmission:* ${carType}%0A` +
+                `*Pickup:* ${pickup || 'Not selected'}%0A` +
+                `*Return:* ${ret || 'Not selected'}%0A%0A` +
+                `Please send me availability and pricing.`;
+
+            window.open(`https://wa.me/306942874950?text=${message}`, "_blank");
+        }
+    </script>
+</body>
+</html>
