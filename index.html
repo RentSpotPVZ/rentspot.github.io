@@ -132,6 +132,27 @@ body {
   padding: 50px;
   background: #f5f5f5;
 }
+.why-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.why-card {
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-weight: 500;
+  min-width: 220px;
+  transition: 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15
 
 /* ABOUT */
 .about {
@@ -301,13 +322,14 @@ body {
 <!-- WHY -->
 <div class="why">
   <h2>Why Choose Us</h2>
-  <p>
-✔ Meet & greet at the airport<br>
-✔ Local company – no middlemen<br>
-✔ Fast response via WhatsApp<br>
-✔ Clean & well-maintained cars<br>
-✔ Flexible pickup & return times
-</p>
+  
+<div class="why-cards">
+    <div class="why-card">✔ Meet & greet at the airport</div>
+    <div class="why-card">✔ Local company – no middlemen</div>
+    <div class="why-card">✔ Fast response via WhatsApp</div>
+    <div class="why-card">✔ Clean & well-maintained cars</div>
+    <div class="why-card">✔ Flexible pickup & return times</div>
+  </div>
 </div>
 
 <!-- ABOUT -->
