@@ -189,18 +189,21 @@ body {
 .reviews-container {
   display: flex;
   justify-content: center;
+  align-items: center;   
   gap: 30px;
   flex-wrap: wrap;
+  max-width: 1000px;   
+  margin: 0 auto;        
 }
 
 .review-card {
   background: #ffffff;
   padding: 25px;
   border-radius: 15px;
-  width: 280px;
+  width: 300px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.12);
   transition: 0.3s;
-
+  cursor: pointer;
   opacity: 0;
   transform: translateY(40px);
 }
@@ -212,12 +215,14 @@ body {
 }
   
 .review-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px) scale(1.02);
   box-shadow: 0 12px 30px rgba(0,0,0,0.18);
 }
 
 .stars {
   margin-bottom: 10px;
+  font-size: 20px;
+  color: #f4b400;
 }
 
 .review-card p {
