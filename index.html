@@ -182,6 +182,9 @@ body {
   padding: 80px 20px;
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .reviews-section h2 {
@@ -189,13 +192,14 @@ body {
 }
 
 .reviews-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 300px));
-  justify-content: center;
-  gap: 30px;
-
+  width: 100%;
   max-width: 1000px;
   margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .review-card {
