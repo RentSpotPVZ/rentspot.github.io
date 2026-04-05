@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,7 +153,6 @@ body {
   z-index: 1;
 }
 
-/* 👇 ΒΑΛΕ ΤΑ ΕΔΩ */
 .reviews-container {
   display: flex;
   justify-content: center;
@@ -216,29 +216,48 @@ body {
 </div>
 
 <!-- HERO -->
-<div class="hero">
- 
-  <div class="box">
-    <h1>RentSpot - Car Rental Preveza & Aktion Airport (PVK)</h1>
+<div class="box">
 
-<select id="carType">
-  <option value="Manual">Manual</option>
-  <option value="Automatic">Automatic</option>
-</select>
+  <h1>Car Rental at Preveza - Aktion Airport (PVK)</h1>
 
-<select id="carCategory">
-  <option value="Small">Small</option>
-  <option value="Medium">Medium</option>
-  <option value="Large">Large</option>
-</select>
+  <p style="font-size:14px;">
+    📲 Get your exact price in 2 minutes via WhatsApp <br>
+    ✈️ We meet you directly at the airport – no waiting
+  </p>
 
-<input type="date" id="pickup">
-<input type="date" id="return">
-
-<button class="btn call" onclick="callNow()">Call Now</button>
-<button class="btn whatsapp" onclick="sendWhatsApp()">Book via WhatsApp </button>
-
+  <div style="font-size:13px;">
+    ✔ No hidden fees<br>
+    ✔ Final price confirmed before booking<br>
+    ✔ Pay on pickup – no prepayment
   </div>
+
+  <select id="carType">
+    <option value="Manual">Manual</option>
+    <option value="Automatic">Automatic</option>
+  </select>
+
+  <select id="carCategory">
+    <option value="Small">Small</option>
+    <option value="Medium">Medium</option>
+    <option value="Large">Large</option>
+  </select>
+
+  <input type="text" id="pickup" placeholder="Pickup Date">
+  <input type="text" id="return" placeholder="Return Date">
+
+  <button class="btn whatsapp" onclick="sendWhatsApp()">
+    Get Price on WhatsApp
+  </button>
+
+  <button class="btn call" onclick="callNow()">
+    Call Now
+  </button>
+
+  <p style="font-size:12px;">
+    We reply instantly with availability & final price
+  </p>
+
+</div>
 </div>
   
   <section style="padding:60px 20px; text-align:center; background:white;">
@@ -341,11 +360,12 @@ function sendWhatsApp() {
   let carType = document.getElementById("carType").value;
   let carCategory = document.getElementById("carCategory").value;
 
-  let message = "🚗 Booking Request%0A%0A" +
+  let message = "🚗 Car Rental Request (PVK Airport)%0A%0A" +
                 "Category: " + carCategory + "%0A" +
                 "Transmission: " + carType + "%0A" +
-                "Pickup: " + pickup + "%0A" +
-                "Return: " + ret;
+                "Pickup Date: " + pickup + "%0A" +
+                "Return Date: " + ret + "%0A%0A" +
+                "Please send me availability and final price.";
 
   window.open("https://wa.me/306942874950?text=" + message, "_blank");
 }
