@@ -48,8 +48,15 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("beach.jpg") center center / cover no-repeat;
-  z-index: -1;
+  background: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("beach.jpg") center center / cover no-repeat;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
 }
 
 .box {
