@@ -1440,7 +1440,8 @@
       'send_to': 'AW-11049957239/Q9cQCM_J-pYCEPFug5Up'
    });
 
-   window.open("https://wa.me/306942874950", "_blank");
+   let url = "https://wa.me/306942874950?text=" + encodeURIComponent(message);
+   window.open(url, "_blank");
 
    return false;
 }
